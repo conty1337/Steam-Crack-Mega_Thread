@@ -1,0 +1,930 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ArchiSteamFarm</name>
+    </assembly>
+    <members>
+        <member name="M:ArchiSteamFarm.Core.GeneratedRegexes.CdKey">
+            <remarks>
+            Pattern:<br/>
+            <code>^[0-9A-Z]{4,7}-[0-9A-Z]{4,7}-[0-9A-Z]{4,7}(?:(?:-[0-9A-Z]{4,7})?(?:-[0-9A-Z]{4,7}))?$</code><br/>
+            Options:<br/>
+            <code>RegexOptions.IgnoreCase | RegexOptions.Compiled | RegexOptions.CultureInvariant</code><br/>
+            Explanation:<br/>
+            <code>
+            ○ Match if at the beginning of the string.<br/>
+            ○ Match a character in the set [0-9A-Za-z\u212A] atomically at least 4 and at most 7 times.<br/>
+            ○ Match '-'.<br/>
+            ○ Match a character in the set [0-9A-Za-z\u212A] atomically at least 4 and at most 7 times.<br/>
+            ○ Match '-'.<br/>
+            ○ Match a character in the set [0-9A-Za-z\u212A] greedily at least 4 and at most 7 times.<br/>
+            ○ Optional (greedy).<br/>
+                ○ Optional (greedy).<br/>
+                    ○ Match '-'.<br/>
+                    ○ Match a character in the set [0-9A-Za-z\u212A] atomically at least 4 and at most 7 times.<br/>
+                ○ Match '-'.<br/>
+                ○ Match a character in the set [0-9A-Za-z\u212A] greedily at least 4 and at most 7 times.<br/>
+            ○ Match if at the end of the string or if before an ending newline.<br/>
+            </code>
+            </remarks>
+        </member>
+        <member name="M:ArchiSteamFarm.Core.GeneratedRegexes.Decimal">
+            <remarks>
+            Pattern:<br/>
+            <code>[0-9\\.,]+</code><br/>
+            Options:<br/>
+            <code>RegexOptions.IgnoreCase | RegexOptions.Compiled | RegexOptions.CultureInvariant</code><br/>
+            Explanation:<br/>
+            <code>
+            ○ Match a character in the set [,.0-9] atomically at least once.<br/>
+            </code>
+            </remarks>
+        </member>
+        <member name="M:ArchiSteamFarm.Core.GeneratedRegexes.Digits">
+            <remarks>
+            Pattern:<br/>
+            <code>\\d+</code><br/>
+            Options:<br/>
+            <code>RegexOptions.IgnoreCase | RegexOptions.Compiled | RegexOptions.CultureInvariant</code><br/>
+            Explanation:<br/>
+            <code>
+            ○ Match a Unicode digit atomically at least once.<br/>
+            </code>
+            </remarks>
+        </member>
+        <member name="M:ArchiSteamFarm.Core.GeneratedRegexes.NonAscii">
+            <remarks>
+            Pattern:<br/>
+            <code>[^\\u0000-\\u007F]+</code><br/>
+            Options:<br/>
+            <code>RegexOptions.IgnoreCase | RegexOptions.Compiled | RegexOptions.CultureInvariant</code><br/>
+            Explanation:<br/>
+            <code>
+            ○ Match a character in the set [^\0-\u007F\u212A] atomically at least once.<br/>
+            </code>
+            </remarks>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.ASFController.ASFEncryptPost(ArchiSteamFarm.IPC.Requests.ASFEncryptRequest)">
+            <summary>
+                Encrypts data with ASF encryption mechanisms using provided details.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.ASFController.ASFGet">
+            <summary>
+                Fetches common info related to ASF as a whole.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.ASFController.ASFHashPost(ArchiSteamFarm.IPC.Requests.ASFHashRequest)">
+            <summary>
+                Hashes data with ASF hashing mechanisms using provided details.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.ASFController.ASFPost(ArchiSteamFarm.IPC.Requests.ASFRequest)">
+            <summary>
+                Updates ASF's global config.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.ASFController.ExitPost">
+            <summary>
+                Makes ASF shutdown itself.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.ASFController.RestartPost">
+            <summary>
+                Makes ASF restart itself.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.ASFController.UpdatePost(ArchiSteamFarm.IPC.Requests.UpdateRequest)">
+            <summary>
+                Makes ASF update itself.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.BotController.BotDelete(System.String)">
+            <summary>
+                Deletes all files related to given bots.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.BotController.BotGet(System.String)">
+            <summary>
+                Fetches common info related to given bots.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.BotController.BotPost(System.String,ArchiSteamFarm.IPC.Requests.BotRequest)">
+            <summary>
+                Updates bot config of given bot.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.BotController.GamesToRedeemInBackgroundDelete(System.String)">
+            <summary>
+                Removes BGR output files of given bots.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.BotController.GamesToRedeemInBackgroundGet(System.String)">
+            <summary>
+                Fetches BGR output files of given bots.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.BotController.GamesToRedeemInBackgroundPost(System.String,ArchiSteamFarm.IPC.Requests.BotGamesToRedeemInBackgroundRequest)">
+            <summary>
+                Adds keys to redeem using BGR to given bot.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.BotController.InputPost(System.String,ArchiSteamFarm.IPC.Requests.BotInputRequest)">
+            <summary>
+                Provides input value to given bot for next usage.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.BotController.PausePost(System.String,ArchiSteamFarm.IPC.Requests.BotPauseRequest)">
+            <summary>
+                Pauses given bots.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.BotController.RedeemPost(System.String,ArchiSteamFarm.IPC.Requests.BotRedeemRequest)">
+            <summary>
+                Redeems cd-keys on given bot.
+            </summary>
+            <remarks>
+                Response contains a map that maps each provided cd-key to its redeem result.
+                Redeem result can be a null value, this means that ASF didn't even attempt to send a request (e.g. because of bot not being connected to Steam network).
+            </remarks>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.BotController.RenamePost(System.String,ArchiSteamFarm.IPC.Requests.BotRenameRequest)">
+            <summary>
+                Renames given bot along with all its related files.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.BotController.ResumePost(System.String)">
+            <summary>
+                Resumes given bots.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.BotController.StartPost(System.String)">
+            <summary>
+                Starts given bots.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.BotController.StopPost(System.String)">
+            <summary>
+                Stops given bots.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.CommandController.CommandPost(ArchiSteamFarm.IPC.Requests.CommandRequest)">
+            <summary>
+                Executes a command.
+            </summary>
+            <remarks>
+                This API endpoint is supposed to be entirely replaced by ASF actions available under /Api/ASF/{action} and /Api/Bot/{bot}/{action}.
+                You should use "given bot" commands when executing this endpoint, omitting targets of the command will cause the command to be executed on first defined bot
+            </remarks>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.GitHubController.GitHubReleaseGet">
+            <summary>
+                Fetches the most recent GitHub release of ASF project.
+            </summary>
+            <remarks>
+                This is internal API being utilizied by our ASF-ui IPC frontend. You should not depend on existence of any /Api/WWW endpoints as they can disappear and change anytime.
+            </remarks>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.GitHubController.GitHubReleaseGet(System.String)">
+            <summary>
+                Fetches specific GitHub release of ASF project. Use "latest" for latest stable release.
+            </summary>
+            <remarks>
+                This is internal API being utilizied by our ASF-ui IPC frontend. You should not depend on existence of any /Api/WWW endpoints as they can disappear and change anytime.
+            </remarks>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.GitHubController.GitHubWikiHistoryGet(System.String)">
+            <summary>
+                Fetches history of specific GitHub page from ASF project.
+            </summary>
+            <remarks>
+                This is internal API being utilizied by our ASF-ui IPC frontend. You should not depend on existence of any /Api/WWW endpoints as they can disappear and change anytime.
+            </remarks>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.GitHubController.GitHubWikiPageGet(System.String,System.String)">
+            <summary>
+                Fetches specific GitHub page of ASF project.
+            </summary>
+            <remarks>
+                This is internal API being utilizied by our ASF-ui IPC frontend. You should not depend on existence of any /Api/WWW endpoints as they can disappear and change anytime.
+                Specifying revision is optional - when not specified, will fetch latest available. If specified revision is invalid, GitHub will automatically fetch the latest revision as well.
+            </remarks>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.IPCBansController.Delete">
+            <summary>
+                Clears the list of all IP addresses currently blocked by ASFs IPC module
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.IPCBansController.DeleteSpecific(System.String)">
+            <summary>
+                Removes an IP address from the list of addresses currently blocked by ASFs IPC module
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.IPCBansController.Get">
+            <summary>
+                Gets all IP addresses currently blocked by ASFs IPC module
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.NLogController.FileGet(System.Int32,System.Int32)">
+            <summary>
+                Fetches ASF log file, this works on assumption that the log file is in fact generated, as user could disable it through custom configuration.
+            </summary>
+            <param name="count">Maximum amount of lines from the log file returned. The respone naturally might have less amount than specified, if you've read whole file already.</param>
+            <param name="lastAt">Ending index, used for pagination. Omit it for the first request, then initialize to TotalLines returned, and on every following request subtract count that you've used in the previous request from it until you hit 0 or less, which means you've read whole file already.</param>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.NLogController.Get(System.Threading.CancellationToken)">
+            <summary>
+                Fetches ASF log in realtime.
+            </summary>
+            <remarks>
+                This API endpoint requires a websocket connection.
+            </remarks>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.StorageController.StorageDelete(System.String)">
+            <summary>
+                Deletes entry under specified key from ASF's persistent KeyValue JSON storage.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.StorageController.StorageGet(System.String)">
+            <summary>
+                Loads entry under specified key from ASF's persistent KeyValue JSON storage.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.StorageController.StoragePost(System.String,Newtonsoft.Json.Linq.JToken)">
+            <summary>
+                Saves entry under specified key in ASF's persistent KeyValue JSON storage.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.StructureController.StructureGet(System.String)">
+            <summary>
+                Fetches structure of given type.
+            </summary>
+            <remarks>
+                Structure is defined as a representation of given object in its default state.
+            </remarks>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.TwoFactorAuthenticationController.ConfirmationsGet(System.String)">
+            <summary>
+                Fetches pending 2FA confirmations of given bots, requires ASF 2FA module to be active on them.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.TwoFactorAuthenticationController.ConfirmationsPost(System.String,ArchiSteamFarm.IPC.Requests.TwoFactorAuthenticationConfirmationsRequest)">
+            <summary>
+                Handles 2FA confirmations of given bots, requires ASF 2FA module to be active on them.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.TwoFactorAuthenticationController.Delete(System.String)">
+            <summary>
+                Deletes the MobileAuthenticator of given bots if an ASF 2FA module is active on them.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.TwoFactorAuthenticationController.Post(System.String,ArchiSteamFarm.Steam.Security.MobileAuthenticator)">
+            <summary>
+                Imports a MobileAuthenticator into the ASF 2FA module of a given bot.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.TwoFactorAuthenticationController.TokenGet(System.String)">
+            <summary>
+                Fetches 2FA tokens of given bots, requires ASF 2FA module to be active on them.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.IPC.Controllers.Api.TypeController.TypeGet(System.String)">
+            <summary>
+                Fetches type info of given type.
+            </summary>
+            <remarks>
+                Type info is defined as a representation of given object with its fields and properties being assigned to a string value that defines their type.
+            </remarks>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Requests.ASFEncryptRequest.CryptoMethod">
+            <summary>
+                Encryption method used for encrypting this string.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Requests.ASFEncryptRequest.StringToEncrypt">
+            <summary>
+                String to encrypt with provided <see cref="P:ArchiSteamFarm.IPC.Requests.ASFEncryptRequest.CryptoMethod" />.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Requests.ASFHashRequest.HashingMethod">
+            <summary>
+                Hashing method used for hashing this string.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Requests.ASFHashRequest.StringToHash">
+            <summary>
+                String to hash with provided <see cref="P:ArchiSteamFarm.IPC.Requests.ASFHashRequest.HashingMethod" />.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Requests.ASFRequest.GlobalConfig">
+            <summary>
+                ASF's global config structure.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Requests.BotGamesToRedeemInBackgroundRequest.GamesToRedeemInBackground">
+            <summary>
+                A string-string map that maps cd-key to redeem (key) to its name (value).
+            </summary>
+            <remarks>
+                Key in the map must be a valid and unique Steam cd-key.
+                Value in the map must be a non-null and non-empty name of the key (e.g. game's name, but can be anything).
+            </remarks>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Requests.BotInputRequest.Type">
+            <summary>
+                Specifies the type of the input.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Requests.BotInputRequest.Value">
+            <summary>
+                Specifies the value for given input type (declared in <see cref="P:ArchiSteamFarm.IPC.Requests.BotInputRequest.Type" />)
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Requests.BotPauseRequest.Permanent">
+            <summary>
+                Specifies if pause is permanent or temporary (default).
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Requests.BotPauseRequest.ResumeInSeconds">
+            <summary>
+                Specifies automatic resume action in given seconds. Default value of 0 disables automatic resume.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Requests.BotRedeemRequest.KeysToRedeem">
+            <summary>
+                A collection (set) of keys to redeem.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Requests.BotRenameRequest.NewName">
+            <summary>
+                Specifies the new name for the bot. The new name can't be "ASF", neither the one used by any existing bot.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Requests.BotRequest.BotConfig">
+            <summary>
+                ASF's bot config structure.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Requests.CommandRequest.Command">
+            <summary>
+                Specifies the command that will be executed by ASF.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Requests.TwoFactorAuthenticationConfirmationsRequest.Accept">
+            <summary>
+                Specifies the target action, whether we should accept the confirmations (true), or decline them (false).
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Requests.TwoFactorAuthenticationConfirmationsRequest.AcceptedCreatorIDs">
+            <summary>
+                Specifies IDs of the confirmations that we're supposed to handle. CreatorID of the confirmation is equal to ID of the object that triggered it - e.g. ID of the trade offer, or ID of the market listing. If not provided, or empty array, all confirmation IDs are considered for an action.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Requests.TwoFactorAuthenticationConfirmationsRequest.AcceptedType">
+            <summary>
+                Specifies the type of confirmations to handle. If not provided, all confirmation types are considered for an action.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Requests.TwoFactorAuthenticationConfirmationsRequest.SAcceptedCreatorIDs">
+            <summary>
+                A helper property which works the same as <see cref="P:ArchiSteamFarm.IPC.Requests.TwoFactorAuthenticationConfirmationsRequest.AcceptedCreatorIDs" /> but with values written as strings - for javascript compatibility purposes. Use either this one, or <see cref="P:ArchiSteamFarm.IPC.Requests.TwoFactorAuthenticationConfirmationsRequest.AcceptedCreatorIDs" />, not both.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Requests.TwoFactorAuthenticationConfirmationsRequest.WaitIfNeeded">
+            <summary>
+                Specifies whether we should wait for the confirmations to arrive, in case they're not available immediately. This option makes sense only if <see cref="P:ArchiSteamFarm.IPC.Requests.TwoFactorAuthenticationConfirmationsRequest.AcceptedCreatorIDs" /> is specified as well, and in this case ASF will add a few more tries if needed to ensure that all specified IDs are handled. Useful if confirmations are generated with a delay on Steam network side, which happens fairly often.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Requests.UpdateRequest.Channel">
+            <summary>
+                Target update channel. Not required, will default to UpdateChannel in GlobalConfig if not provided.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.ASFResponse.BuildVariant">
+            <summary>
+                ASF's build variant.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.ASFResponse.CanUpdate">
+            <summary>
+                A value specifying whether this variant of ASF is capable of auto-update.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.ASFResponse.GlobalConfig">
+            <summary>
+                Currently loaded ASF's global config.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.ASFResponse.MemoryUsage">
+            <summary>
+                Current amount of managed memory being used by the process, in kilobytes.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.ASFResponse.ProcessStartTime">
+            <summary>
+                Start date of the process.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.ASFResponse.Service">
+            <summary>
+                Boolean value specifying whether ASF has been started with a --service parameter.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.ASFResponse.Version">
+            <summary>
+                ASF version of currently running binary.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.GamesToRedeemInBackgroundResponse.UnusedKeys">
+            <summary>
+                Keys that were redeemed and not used during the process, if available.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.GamesToRedeemInBackgroundResponse.UsedKeys">
+            <summary>
+                Keys that were redeemed and used during the process, if available.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.GenericResponse`1.Result">
+            <summary>
+                The actual result of the request, if available.
+            </summary>
+            <remarks>
+                The type of the result depends on the API endpoint that you've called.
+            </remarks>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.GenericResponse.Message">
+            <summary>
+                A message that describes what happened with the request, if available.
+            </summary>
+            <remarks>
+                This property will provide exact reason for majority of expected failures.
+            </remarks>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.GenericResponse.Success">
+            <summary>
+                Boolean type that specifies if the request has succeeded.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.GitHubReleaseResponse.ChangelogHTML">
+            <summary>
+                Changelog of the release rendered in HTML.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.GitHubReleaseResponse.ReleasedAt">
+            <summary>
+                Date of the release.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.GitHubReleaseResponse.Stable">
+            <summary>
+                Boolean value that specifies whether the build is stable or not (pre-release).
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.GitHubReleaseResponse.Version">
+            <summary>
+                Version of the release.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.LogResponse.Content">
+            <summary>
+                Content of the log file which consists of lines read from it - in chronological order.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.LogResponse.TotalLines">
+            <summary>
+                Total number of lines of the log file returned, can be used as an index for future requests.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.StatusCodeResponse.Permanent">
+            <summary>
+                Value indicating whether the status is permanent. If yes, retrying the request with exactly the same payload doesn't make sense due to a permanent problem (e.g. ASF misconfiguration).
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.StatusCodeResponse.StatusCode">
+            <summary>
+                Status code transmitted in addition to the one in HTTP spec.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.TypeProperties.BaseType">
+            <summary>
+                Base type of given type, if available.
+            </summary>
+            <remarks>
+                This can be used for determining how the body of the response should be interpreted.
+            </remarks>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.TypeProperties.CustomAttributes">
+            <summary>
+                Custom attributes of given type, if available.
+            </summary>
+            <remarks>
+                This can be used for determining main enum type if <see cref="P:ArchiSteamFarm.IPC.Responses.TypeProperties.BaseType" /> is <see cref="T:System.Enum" />.
+            </remarks>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.TypeProperties.UnderlyingType">
+            <summary>
+                Underlying type of given type, if available.
+            </summary>
+            <remarks>
+                This can be used for determining underlying enum type if <see cref="P:ArchiSteamFarm.IPC.Responses.TypeProperties.BaseType" /> is <see cref="T:System.Enum" />.
+            </remarks>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.TypeResponse.Body">
+            <summary>
+                A string-string map representing a decomposition of given type.
+            </summary>
+            <remarks>
+                The actual structure of this field depends on the type that was requested. You can determine that type based on <see cref="P:ArchiSteamFarm.IPC.Responses.TypeResponse.Properties" /> metadata.
+                For enums, keys are friendly names while values are underlying values of those names.
+                For objects, keys are non-private fields and properties, while values are underlying types of those.
+            </remarks>
+        </member>
+        <member name="P:ArchiSteamFarm.IPC.Responses.TypeResponse.Properties">
+            <summary>
+                Metadata of given type.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IASF.OnASFInit(System.Collections.Generic.IReadOnlyDictionary{System.String,Newtonsoft.Json.Linq.JToken})">
+            <summary>
+                ASF will call this method right after global config initialization.
+            </summary>
+            <param name="additionalConfigProperties">Extra config properties made out of <see cref="T:Newtonsoft.Json.JsonExtensionDataAttribute" />. Can be null if no extra properties are found.</param>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IBot.OnBotDestroy(ArchiSteamFarm.Steam.Bot)">
+            <summary>
+                ASF will call this method after removing its own references from it, e.g. after config removal.
+                You should ensure that you'll remove any of your own references to this bot instance in timely manner.
+                Doing so will allow the garbage collector to dispose the bot afterwards, refraining from doing so will create a "memory leak" by keeping the reference alive.
+            </summary>
+            <param name="bot">Bot object related to this callback.</param>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IBot.OnBotInit(ArchiSteamFarm.Steam.Bot)">
+            <summary>
+                ASF will call this method after creating the bot object, e.g. after config creation.
+                Bot config is not yet available at this stage. This function will execute only once for every bot object.
+            </summary>
+            <param name="bot">Bot object related to this callback.</param>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IBotCardsFarmerInfo.OnBotFarmingFinished(ArchiSteamFarm.Steam.Bot,System.Boolean)">
+            <summary>
+                ASF will call this method when cards farming module is finished on given bot instance. This method will also be called when there is nothing to idle or idling is unavailable, you can use provided boolean value for determining that.
+            </summary>
+            <param name="bot">Bot object related to this callback.</param>
+            <param name="farmedSomething">Bool value indicating whether the module has finished successfully, so when there was at least one card to drop, and nothing has interrupted us in the meantime.</param>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IBotCardsFarmerInfo.OnBotFarmingStarted(ArchiSteamFarm.Steam.Bot)">
+            <summary>
+                ASF will call this method when cards farming module is started on given bot instance. The module is started only when there are valid cards to drop, so this method won't be called when there is nothing to idle.
+            </summary>
+            <param name="bot">Bot object related to this callback.</param>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IBotCardsFarmerInfo.OnBotFarmingStopped(ArchiSteamFarm.Steam.Bot)">
+            <summary>
+                ASF will call this method when cards farming module is stopped on given bot instance. The stop could be a result of a natural finish, or other situations (e.g. Steam networking issues, user commands).
+            </summary>
+            <param name="bot">Bot object related to this callback.</param>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IBotCommand2.OnBotCommand(ArchiSteamFarm.Steam.Bot,ArchiSteamFarm.Steam.EAccess,System.String,System.String[],System.UInt64)">
+            <summary>
+                ASF will call this method for unrecognized commands.
+            </summary>
+            <param name="bot">Bot object related to this callback.</param>
+            <param name="access">Access of user executing the command.</param>
+            <param name="message">Command message in its raw format, stripped of <see cref="P:ArchiSteamFarm.Storage.GlobalConfig.CommandPrefix" />.</param>
+            <param name="args">Pre-parsed message using standard ASF delimiters.</param>
+            <param name="steamID">Optionally, steamID of the user who executed the command - may not be available with value of 0 (e.g. ASF API).</param>
+            <returns>Response to the command, or null/empty (as the task value) if the command isn't handled by this plugin.</returns>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IBotConnection.OnBotDisconnected(ArchiSteamFarm.Steam.Bot,SteamKit2.EResult)">
+            <summary>
+                ASF will call this method when bot gets disconnected from Steam network.
+            </summary>
+            <param name="bot">Bot object related to this callback.</param>
+            <param name="reason">Reason for disconnection, or <see cref="F:SteamKit2.EResult.OK" /> if the disconnection was initiated by ASF (e.g. as a result of a command).</param>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IBotConnection.OnBotLoggedOn(ArchiSteamFarm.Steam.Bot)">
+            <summary>
+                ASF will call this method when bot successfully connects to Steam network.
+            </summary>
+            <param name="bot">Bot object related to this callback.</param>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IBotCustomMachineInfoProvider.GetMachineInfoProvider(ArchiSteamFarm.Steam.Bot)">
+            <summary>
+                ASF will use this property as the <see cref="T:SteamKit2.IMachineInfoProvider" /> for the specified bot.
+                Unless you know what you're doing, you should not implement this interface yourself and let ASF decide.
+            </summary>
+            <remarks>This method will be called with very limited amount of bot-related data, as it's used during bot initialization. We recommend to stick with <see cref="P:ArchiSteamFarm.Steam.Bot.BotName" />, <see cref="P:ArchiSteamFarm.Steam.Bot.BotConfig" /> and <see cref="P:ArchiSteamFarm.Steam.Bot.BotDatabase" /> exclusively.</remarks>
+            <param name="bot">Bot object related to this callback.</param>
+            <returns><see cref="T:SteamKit2.IMachineInfoProvider" /> that will be used for the particular bot. You can return null if you want to use default implementation.</returns>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IBotFriendRequest.OnBotFriendRequest(ArchiSteamFarm.Steam.Bot,System.UInt64)">
+            <summary>
+                ASF will call this method for unhandled (ignored and rejected) friend requests and Steam group invites received by the bot.
+            </summary>
+            <param name="bot">Bot object related to this callback.</param>
+            <param name="steamID">64-bit Steam identificator of the user that sent a friend request, or a group that the bot has been invited to.</param>
+            <returns>True if the request should be accepted as part of this plugin, false otherwise.</returns>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IBotIdentity.OnSelfPersonaState(ArchiSteamFarm.Steam.Bot,SteamKit2.SteamFriends.PersonaStateCallback,System.String,System.String)">
+            <summary>
+                ASF will call this method when bot receives its own identity information.
+            </summary>
+            <param name="bot">Bot object related to this callback.</param>
+            <param name="data">Full data received by ASF in the callback that relates to this bot (Steam) account.</param>
+            <param name="nickname">Parsed nickname set for this bot (Steam) account.</param>
+            <param name="avatarHash">Parsed hash of the avatar of this bot (Steam) account, as hex.</param>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IBotMessage.OnBotMessage(ArchiSteamFarm.Steam.Bot,System.UInt64,System.String)">
+            <summary>
+                ASF will call this method for messages that are not commands, so ones that do not start from <see cref="P:ArchiSteamFarm.Storage.GlobalConfig.CommandPrefix" />.
+            </summary>
+            <param name="bot">Bot object related to this callback.</param>
+            <param name="steamID">64-bit long unsigned integer of steamID executing the command.</param>
+            <param name="message">Message in its raw format.</param>
+            <returns>Response to the message, or null/empty (as the task value) for silence.</returns>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IBotModules.OnBotInitModules(ArchiSteamFarm.Steam.Bot,System.Collections.Generic.IReadOnlyDictionary{System.String,Newtonsoft.Json.Linq.JToken})">
+            <summary>
+                ASF will call this method right after bot config initialization.
+            </summary>
+            <param name="bot">Bot object related to this callback.</param>
+            <param name="additionalConfigProperties">Extra config properties made out of <see cref="T:Newtonsoft.Json.JsonExtensionDataAttribute" />. Can be null if no extra properties are found.</param>
+        </member>
+        <member name="P:ArchiSteamFarm.Plugins.Interfaces.IBotsComparer.BotsComparer">
+            <summary>
+                ASF will use this property for determining the comparer for the bots.
+                Unless you know what you're doing, you should not implement this property yourself and let ASF decide.
+            </summary>
+            <returns>Comparer that will be used for the bots, as well as bot regexes.</returns>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IBotSteamClient.OnBotSteamCallbacksInit(ArchiSteamFarm.Steam.Bot,SteamKit2.CallbackManager)">
+            <summary>
+                ASF will call this method right after custom SK2 client handler initialization in order to allow you listening for callbacks in your own code.
+            </summary>
+            <param name="bot">Bot object related to this callback.</param>
+            <param name="callbackManager">Callback manager object which can be used for establishing subscriptions to standard and custom callbacks.</param>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IBotSteamClient.OnBotSteamHandlersInit(ArchiSteamFarm.Steam.Bot)">
+            <summary>
+                ASF will call this method right after bot initialization in order to allow you hooking custom SK2 client handlers into the SteamClient.
+            </summary>
+            <param name="bot">Bot object related to this callback.</param>
+            <returns>Collection of custom client handlers that are supposed to be hooked into the SteamClient by ASF. If you do not require any, just return null or empty collection.</returns>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IBotTradeOffer.OnBotTradeOffer(ArchiSteamFarm.Steam.Bot,ArchiSteamFarm.Steam.Data.TradeOffer)">
+            <summary>
+                ASF will call this method for unhandled (ignored and rejected) trade offers received by the bot.
+            </summary>
+            <param name="bot">Bot object related to this callback.</param>
+            <param name="tradeOffer">Trade offer related to this callback.</param>
+            <returns>True if the trade offer should be accepted as part of this plugin, false otherwise.</returns>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IBotTradeOfferResults.OnBotTradeOfferResults(ArchiSteamFarm.Steam.Bot,System.Collections.Generic.IReadOnlyCollection{ArchiSteamFarm.Steam.Exchange.ParseTradeResult})">
+            <summary>
+                ASF will call this method for notifying you about the result of each received trade offer being handled. The method is executed for each batch that can contain 1 or more trade offers.
+            </summary>
+            <param name="bot">Bot object related to this callback.</param>
+            <param name="tradeResults">Trade results related to this callback.</param>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IBotUserNotifications.OnBotUserNotifications(ArchiSteamFarm.Steam.Bot,System.Collections.Generic.IReadOnlyCollection{ArchiSteamFarm.Steam.Integration.Callbacks.UserNotificationsCallback.EUserNotification})">
+            <summary>
+                ASF will call this method when number of notifications for one or more notification types changes.
+            </summary>
+            <param name="bot">Bot object related to this callback.</param>
+            <param name="newNotifications">Collection containing those notification types that are new (that is, when new count > previous count of that notification type).</param>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.ICrossProcessSemaphoreProvider.GetCrossProcessSemaphore(System.String)">
+            <summary>
+                ASF will call this method when initializing instance of <see cref="T:ArchiSteamFarm.Helpers.ICrossProcessSemaphore" /> for its internal limiters.
+            </summary>
+            <param name="resourceName">Unique resource name provided by ASF for identification purposes.</param>
+            <returns>Concrete implementation of <see cref="T:ArchiSteamFarm.Helpers.ICrossProcessSemaphore" /> providing required functionality. It's allowed to return null if you want to use ASF's default implementation for specified resource instead.</returns>
+        </member>
+        <member name="P:ArchiSteamFarm.Plugins.Interfaces.IPlugin.Name">
+            <summary>
+                ASF will use this property as general plugin identifier for the user.
+            </summary>
+            <returns>String that will be used as the name of this plugin.</returns>
+        </member>
+        <member name="P:ArchiSteamFarm.Plugins.Interfaces.IPlugin.Version">
+            <summary>
+                ASF will use this property as version indicator of your plugin to the user.
+                You have a freedom in deciding what versioning you want to use, this is for identification purposes only.
+            </summary>
+            <returns>Version that will be shown to the user when plugin is loaded.</returns>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IPlugin.OnLoaded">
+            <summary>
+                ASF will call this method right after plugin initialization.
+            </summary>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.ISteamPICSChanges.GetPreferredChangeNumberToStartFrom">
+            <summary>
+                ASF uses this method for determining the point in time from which it should keep history going upon a restart. The actual point in time that will be used is calculated as the lowest change number from all loaded plugins, to guarantee that no plugin will miss any changes, while allowing possible duplicates for those plugins that were already synchronized with newer changes. If you don't care about persistent state and just want to receive the ongoing history, you should return 0 (which is equal to "I'm fine with any"). If there won't be any plugin asking for a specific point in time, ASF will start returning entries since the start of the program.
+            </summary>
+            <returns>The most recent change number from which you're fine to receive <see cref="M:ArchiSteamFarm.Plugins.Interfaces.ISteamPICSChanges.OnPICSChanges(System.UInt32,System.Collections.Generic.IReadOnlyDictionary{System.UInt32,SteamKit2.SteamApps.PICSChangesCallback.PICSChangeData},System.Collections.Generic.IReadOnlyDictionary{System.UInt32,SteamKit2.SteamApps.PICSChangesCallback.PICSChangeData})" />.</returns>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.ISteamPICSChanges.OnPICSChanges(System.UInt32,System.Collections.Generic.IReadOnlyDictionary{System.UInt32,SteamKit2.SteamApps.PICSChangesCallback.PICSChangeData},System.Collections.Generic.IReadOnlyDictionary{System.UInt32,SteamKit2.SteamApps.PICSChangesCallback.PICSChangeData})">
+            <summary>
+                ASF will call this method upon receiving any app/package PICS changes. The history is guaranteed to be precise and continuous starting from <see cref="M:ArchiSteamFarm.Plugins.Interfaces.ISteamPICSChanges.GetPreferredChangeNumberToStartFrom" /> until <see cref="M:ArchiSteamFarm.Plugins.Interfaces.ISteamPICSChanges.OnPICSChangesRestart(System.UInt32)" /> is called. It's possible for this method to have duplicated calls across different runs, in particular when some other plugin asks for lower <see cref="M:ArchiSteamFarm.Plugins.Interfaces.ISteamPICSChanges.GetPreferredChangeNumberToStartFrom" />, therefore you should keep that in mind (and refer to change number of standalone apps/packages).
+            </summary>
+            <param name="currentChangeNumber">The change number of current callback.</param>
+            <param name="appChanges">App changes that happened since the previous call of this method. Can be empty.</param>
+            <param name="packageChanges">Package changes that happened since the previous call of this method. Can be empty.</param>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.ISteamPICSChanges.OnPICSChangesRestart(System.UInt32)">
+            <summary>
+                ASF will call this method when it'll be necessary to restart the history of PICS changes. This can happen due to Steam limitation in which we're unable to keep history going if we're too far behind (approx 5k changeNumbers). If you're relying on continuous history of app/package PICS changes sent by <see cref="M:ArchiSteamFarm.Plugins.Interfaces.ISteamPICSChanges.OnPICSChanges(System.UInt32,System.Collections.Generic.IReadOnlyDictionary{System.UInt32,SteamKit2.SteamApps.PICSChangesCallback.PICSChangeData},System.Collections.Generic.IReadOnlyDictionary{System.UInt32,SteamKit2.SteamApps.PICSChangesCallback.PICSChangeData})" />, ASF can no longer guarantee that upon calling this method, therefore you should start clean.
+            </summary>
+            <param name="currentChangeNumber">The change number from which we're restarting the PICS history.</param>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IUpdateAware.OnUpdateFinished(System.Version,System.Version)">
+            <summary>
+                ASF will call this method after update to a particular ASF version has been finished, just before restart of the process.
+            </summary>
+            <param name="currentVersion">The current (old) version of ASF program.</param>
+            <param name="newVersion">The target (new) version of ASF program.</param>
+        </member>
+        <member name="M:ArchiSteamFarm.Plugins.Interfaces.IUpdateAware.OnUpdateProceeding(System.Version,System.Version)">
+            <summary>
+                ASF will call this method before proceeding with an update to a particular ASF version.
+            </summary>
+            <param name="currentVersion">The current (old) version of ASF program.</param>
+            <param name="newVersion">The target (new) version of ASF program.</param>
+        </member>
+        <member name="T:ArchiSteamFarm.Plugins.Interfaces.IWebInterface">
+            <summary>
+                Implementing this interface allows you to provide your own (custom) web interface files that will be exposed by standard ASF's IPC interface. In order to achieve that, you must include a directory with your web interface (html, css, js) files together with your plugin's DLL assembly, then specify path to it in <see cref="P:ArchiSteamFarm.Plugins.Interfaces.IWebInterface.PhysicalPath" /> and finally the path under which you want to host those files in <see cref="P:ArchiSteamFarm.Plugins.Interfaces.IWebInterface.WebPath" />.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.Plugins.Interfaces.IWebInterface.PhysicalPath">
+            <summary>
+                Specifies physical path to static WWW files provided by the plugin. Can be either relative to plugin's assembly location, or absolute. Default value of "www" assumes that you ship "www" directory together with your plugin's main DLL assembly, similar to ASF.
+            </summary>
+        </member>
+        <member name="P:ArchiSteamFarm.Plugins.Interfaces.IWebInterface.WebPath">
+            <summary>
+                Specifies web path (address) under which ASF should host your static WWW files in <see cref="P:ArchiSteamFarm.Plugins.Interfaces.IWebInterface.PhysicalPath" /> directory. Default value of "/" allows you to override default ASF files and gives you full flexibility in your <see cref="P:ArchiSteamFarm.Plugins.Interfaces.IWebInterface.PhysicalPath" /> directory. However, you can instead host your files under some other fixed location specified here, such as "/MyPlugin".
+            </summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.CdKey_0">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex"/>-derived type for the CdKey method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.CdKey_0.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.CdKey_0.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.CdKey_0.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner"/> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.CdKey_0.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner"/> used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.CdKey_0.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.CdKey_0.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan"/> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.CdKey_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan"/> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.CdKey_0.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Determine whether <paramref name="inputSpan"/> at base.runtextpos is a match for the regular expression.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if the regular expression matches at the current position; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Decimal_1">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex"/>-derived type for the Decimal method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Decimal_1.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Decimal_1.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Decimal_1.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner"/> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Decimal_1.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner"/> used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Decimal_1.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Decimal_1.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan"/> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Decimal_1.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan"/> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Decimal_1.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Determine whether <paramref name="inputSpan"/> at base.runtextpos is a match for the regular expression.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if the regular expression matches at the current position; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Digits_2">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex"/>-derived type for the Digits method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Digits_2.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Digits_2.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Digits_2.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner"/> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Digits_2.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner"/> used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Digits_2.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Digits_2.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan"/> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Digits_2.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan"/> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Digits_2.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Determine whether <paramref name="inputSpan"/> at base.runtextpos is a match for the regular expression.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if the regular expression matches at the current position; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.NonAscii_3">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex"/>-derived type for the NonAscii method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.NonAscii_3.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.NonAscii_3.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.NonAscii_3.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner"/> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.NonAscii_3.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner"/> used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.NonAscii_3.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.NonAscii_3.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan"/> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.NonAscii_3.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan"/> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.NonAscii_3.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Determine whether <paramref name="inputSpan"/> at base.runtextpos is a match for the regular expression.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if the regular expression matches at the current position; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Utilities">
+            <summary>Helper methods used by generated <see cref="T:System.Text.RegularExpressions.Regex"/>-derived implementations.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout">
+            <summary>Default timeout value set in <see cref="T:System.AppContext"/>, or <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout"/> if none was set.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_hasTimeout">
+            <summary>Whether <see cref="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout"/> is non-infinite.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Utilities.IndexOfAnyDigit(System.ReadOnlySpan{System.Char})">
+            <summary>Finds the next index of any character that matches a Unicode digit.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Utilities.IndexOfNonAsciiOrAny_1E64CDF349EFA74B1F2B3E7A0B7A465BBA519F4FBEB0061E3EE4D48AF8794D22(System.ReadOnlySpan{System.Char})">
+            <summary>Finds the next index of any character that matches a character in the set [^\0-\u007F\u212A].</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Utilities.StackPop(System.Int32[],System.Int32@,System.Int32@,System.Int32@)">
+            <summary>Pops 2 values from the backtracking stack.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Utilities.StackPush(System.Int32[]@,System.Int32@,System.Int32)">
+            <summary>Pushes 1 value onto the backtracking stack.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Utilities.StackPush(System.Int32[]@,System.Int32@,System.Int32,System.Int32)">
+            <summary>Pushes 2 values onto the backtracking stack.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_asciiExceptDigits">
+            <summary>Supports searching for characters in or not in "\0\u0001\u0002\u0003\u0004\u0005\u0006\a\b\t\n\v\f\r\u000e\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f !\"#$%&amp;'()*+,-./:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\u007f".</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_ascii_50FF030000000000000000">
+            <summary>Supports searching for characters in or not in ",.0123456789".</summary>
+        </member>
+    </members>
+</doc>
